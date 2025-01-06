@@ -1,3 +1,5 @@
+#This code will check if your Raspberry Pi is connected to a wifi network and if not, it will keep turning off and on the wifi until it connects
+
 import os
 import time
 import subprocess
