@@ -1,0 +1,39 @@
+//This code is a simple example of how to easily connect and control an Arduino with a Raspberry Pi using  serial communication  
+//You need to first connect the Arduino and Raspberry Pi with the USB cable
+//Here is the Arduino code
+
+#include <Arduino.h>
+
+void setup() {
+  // Initialize serial communication
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Check for incoming serial data
+  if (Serial.available() > 0) {
+    String command = Serial.readStringUntil('\n'); // Read the incoming command
+
+    if (command == "1") {
+      // Add your code/task here for command 1
+      Serial.println("Command 1 received: Perform task 1");
+    } else if (command == "2") {
+      // AAdd your code/task here for command 2
+      Serial.println("Command 2 received: Perform task 2");
+    } else if (command == "3") {
+      // Add your code/task here for command 3
+      Serial.println("Command 3 received: Perform task 3");
+    } else if (command == "4") {
+      // Add your code/task here for command 4
+      Serial.println("Command 4 received: Perform task 4");
+    } else if (command == "5") {
+      // Add your code/task here for command 5
+      Serial.println("Command 5 received: Perform task 5");
+    } else {
+      // If the command is not recognized
+      Serial.println("Unknown command: " + command);
+    }
+  }
+
+  delay(100); // Short delay to prevent rapid serial processing
+}
