@@ -15,7 +15,7 @@ print("Type 'x' to close the program.")
 try:
     while True:
         # Get user input
-        user_input = input("Enter data to send to Arduino: ")
+        user_input = input("Enter data to send to Arduino: 1 to 5 ")
 
         if user_input.lower() == 'x':
             break  # Exit the loop if the user types 'x'
